@@ -1,6 +1,6 @@
 #multiplication table of any two difit number
 
-nums = [87, 38, 76]
+nums = [87, 38, 76, 19, 78, 49, 67]
 
 for i in nums:
     print("Now doing: " + str(i))
