@@ -1,0 +1,8 @@
+#multiplication table of any two difit number
+
+nums = [5, 10, 15, 25, 30]
+
+for i in nums:
+    print("Now doing: " + str(i))
+    for j in range(i):
+        print(str(i) + " * " + str(j) + " = " + str(i*j))
