@@ -3,12 +3,13 @@
 import math, random
 
 class Number:
-    def __init__(self, digits, primeness, square, oddness, mirrored):
+    def __init__(self, digits, primeness, square, oddness, mirrored, value):
         self.digits = digits
         self.primeness = primeness
         self.square = square
         self.oddness = oddness
         self.mirrored = mirrored
+        self.value = value
 
 def isPrime(x):
     if x >= 2:
@@ -42,14 +43,40 @@ for i in range(100):
     else:
         mirrored = False
 
+    value = i
+
     glutton = "obj" + str(i)
 
-    glutton = Number(digits, primeness, square, oddness, mirrored)
+    glutton = Number(digits, primeness, square, oddness, mirrored, value)
 
     bung.append(glutton)
 
-print(bung[2].oddness)
+num_attributes = []
 
+def questionAsker(question):
+    if input(question) in ["Yes", "yes", "True", "true"]:
+        num_attributes.append(True)
+    else:
+        num_attributes.append(False)
 
+num_attributes.append(input("How many digits is your number? "))
 
-    
+questionList = ["Is your number prime? ", "Is your number square? ", "Is your number odd? ", "Is your number mirrored? "]
+
+for question in questionList:
+    questionAsker(question)
+
+for num in bung: #Hackathon challenge: Rewrite this portion using a dictionary
+    if num.digits != int(num_attributes[0]):
+        bung.remove(num)
+    if num.primeness != num_attributes[1] and (num in bung):
+        bung.remove(num)
+    if num.square != num_attributes[2] and (num in bung):
+        bung.remove(num)
+    if num.oddness != num_attributes[3] and (num in bung):
+        bung.remove(num)
+    if num.mirrored != num_attributes[4] and (num in bung):
+        bung.remove(num)
+
+for i in bung:
+    print(i.value)
