@@ -7,7 +7,7 @@
 <tr>
 <td>Week 0 Reivew Ticket</td>
 <td> 
-  <a href="https://github.com/DistilledVinegar/tri3/issues/1 target="_blank">Review Ticket with Tangibles & Feedback</a>
+  <a href="https://github.com/DistilledVinegar/tri3/issues/1" target="_blank">Review Ticket with Tangibles & Feedback</a>
 </td>
 </tr>
 
