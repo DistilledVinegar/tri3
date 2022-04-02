@@ -45,38 +45,61 @@ for i in range(100):
 
     value = i
 
-    glutton = "obj" + str(i)
-
     glutton = Number(digits, primeness, square, oddness, mirrored, value)
 
     bung.append(glutton)
 
-num_attributes = []
-
 def questionAsker(question):
-    if input(question) in ["Yes", "yes", "True", "true"]:
-        num_attributes.append(True)
-    else:
-        num_attributes.append(False)
-
-num_attributes.append(input("How many digits is your number? "))
-
+    answer = input(question)
+    while answer not in ["yes", "no", "Yes", "No"]:
+        print("no no no this is ALL wrong")
+        answer = input(question)
+    return answer
+        
 questionList = ["Is your number prime? ", "Is your number square? ", "Is your number odd? ", "Is your number mirrored? "]
 
-for question in questionList:
-    questionAsker(question)
+digits = int(input("How many digits is your number? "))
+for num in bung: 
+    if num.digits != digits:
+        print("removing " + str(num.value))
+        bung.remove(num)
+        print(len(bung))
+        
+primeness = questionAsker(questionList[0])
+for num in bung: 
+    if num.primeness != primeness:
+        print("removing " + str(num.value))
+        bung.remove(num)
 
-for num in bung: #Hackathon challenge: Rewrite this portion using a dictionary
-    if num.digits != int(num_attributes[0]):
+squareness = questionAsker(questionList[1])
+for num in bung: 
+    if num.square != squareness:
+        print("removing " + str(num.value))
         bung.remove(num)
-    if num.primeness != num_attributes[1] and (num in bung):
+        
+oddness = questionAsker(questionList[2])
+for num in bung: 
+    if num.oddness != oddness:
+        print("removing " + str(num.value))
         bung.remove(num)
-    if num.square != num_attributes[2] and (num in bung):
+        
+mirrored = questionAsker(questionList[3])
+for num in bung: 
+    if num.mirrored != mirrored:
+        print("removing " + str(num.value))
         bung.remove(num)
-    if num.oddness != num_attributes[3] and (num in bung):
+
+"""for num in bung: #Hackathon challenge: Rewrite this portion using a dictionary
+    if num.digits != digits:
         bung.remove(num)
-    if num.mirrored != num_attributes[4] and (num in bung):
+    elif num.primeness != primeness:
         bung.remove(num)
+    elif num.square != squareness:
+        bung.remove(num)
+    elif num.oddness != oddness:
+        bung.remove(num)
+    elif num.mirrored != mirrored:
+        bung.remove(num)"""
 
 for i in bung:
     print(i.value)
