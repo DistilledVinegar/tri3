@@ -41,34 +41,22 @@ for i in bung:
     if i.digits == digits:
         sniff.append(i)
 
-bung = sniff
-sniff = []
-primeness = questionAsker(questionList[0])
-for i in bung:
-    if i.primeness == primeness:
-        sniff.append(i)
+def narrow(attribute, answer):
+    global bung
+    global sniff
+    bung = sniff
+    sniff = []
+    for i in bung:
+        print("Checking: " + str(i.value))
+        gulch = 'i.' + attribute
+        if eval(gulch) == answer:
+            print("Appending: " + str(i.value))
+            sniff.append(i)
+        
+narrow("primeness", questionAsker(questionList[0]))
+narrow("square", questionAsker(questionList[1]))
+narrow("oddness", questionAsker(questionList[2]))
+narrow("mirrored", questionAsker(questionList[3]))
 
-bung = sniff
-sniff = []
-square = questionAsker(questionList[1])
-for i in bung:
-    if i.square == square:
-        sniff.append(i)
-
-bung = sniff
-sniff = []
-oddness = questionAsker(questionList[2])
-for i in bung:
-    if i.oddness == oddness:
-        sniff.append(i)
-
-bung = sniff
-sniff = []
-mirrored = questionAsker(questionList[3])
-for i in bung:
-    if i.mirrored == mirrored:
-        sniff.append(i)
-
-
-for i in bung:
+for i in sniff:
     print(str(i.value))
