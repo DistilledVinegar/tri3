@@ -58,5 +58,16 @@ narrow("square", questionAsker(questionList[1]))
 narrow("oddness", questionAsker(questionList[2]))
 narrow("mirrored", questionAsker(questionList[3]))
 
-for i in sniff:
-    print(str(i.value))
+if len(sniff) == 0:
+    print("Sorry, no numbers match that criteria!")
+elif len(sniff) == 1:
+    print("Your number is... " + str(sniff[0]))
+else:
+    kms = False
+    while len(sniff) > 1 or kms == False:
+        gustavo = random.choice(sniff)
+        kms = questionAsker("Is your number " + str(gustavo.value) + "? ")
+        if kms == True:
+            print("Your number is... " + str(gustavo.value))
+            exit()
+        sniff.remove(gustavo)
