@@ -2,6 +2,33 @@
 
 # TPT Notes and Questions
 
+# Test Corrections:
+
+Finals Test 1:
+
+Q9: Correction: The company will be less likely to be able to provide a human representative for every call rather than customers mistakenly dialing the wrong department.
+
+Q21: The World Wide Web is a network, not a data stream.
+
+Q23: Cookies contain much more personal information than the IP address, which is necessary for routing Internet traffic.
+
+Q29: Wrong - the program does not even correctly display the sum of the indices of the list [0,1,4,5].
+
+Q31: Computing innovations cannot be based on technologies that haven’t been released yet.
+
+Q36: The database does not contain gender. Instead, you can sort to see which items are not in stock.
+
+Finals Test 2:
+
+Q41: Individual prices cannot be determined from the aggregated data entries.
+
+Q46: Being able to easily check that an encyclopedia is free of copyright infringement is not a major benefit, but having more perspectives reflected is.
+
+Q47: Participants who read more were more likely, not less likely.
+
+Q48: A minimum of 2 connections would need to be broken for Machine A to be completely cut off.
+
+
 
 # Week Two
 
