@@ -47,10 +47,8 @@ def narrow(attribute, answer):
     bung = sniff
     sniff = []
     for i in bung:
-        print("Checking: " + str(i.value))
         gulch = 'i.' + attribute
         if eval(gulch) == answer:
-            print("Appending: " + str(i.value))
             sniff.append(i)
         
 narrow("primeness", questionAsker(questionList[0]))
