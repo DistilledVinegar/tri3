@@ -28,7 +28,15 @@ Q47: Participants who read more were more likely, not less likely.
 
 Q48: A minimum of 2 connections would need to be broken for Machine A to be completely cut off.
 
+Finals Test 3:
 
+Q23: Crowdsourcing would be most effective for gathering data on the app's users in this situation.
+
+Q31: The binary number 01001 corresponds to 17, not 9.
+
+Q35: The IP address does not create as great a privacy risk for the user as their cookies being leaked.
+
+Q40: The work would be published under a Creative Commons License.
 
 # Week Two
 
